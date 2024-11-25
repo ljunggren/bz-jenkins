@@ -1,28 +1,49 @@
-# boozang-jenkins
+# Jenkins Plugin: My Awesome Plugin
 
-## Introduction
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Jenkins Plugin](https://img.shields.io/jenkins/plugin/my-awesome-plugin)
 
-TODO Describe what your plugin does here
+## Overview
 
-## Getting started
+My Awesome Plugin is a Jenkins plugin that enhances your CI/CD pipelines by providing custom functionality to automate your workflows seamlessly.
 
-TODO Tell users how to configure your plugin here, include screenshots, pipeline examples and 
-configuration-as-code examples.
+### Key Features
+- Feature 1: Describe the first key feature here.
+- Feature 2: Describe the second key feature here.
+- Feature 3: Describe the third key feature here.
 
-## Issues
+## Prerequisites
 
-TODO Decide where you're going to host your issues, the default is Jenkins JIRA, but you can also enable GitHub issues,
-If you use GitHub issues there's no need for this section; else add the following line:
+Run with Java 17
 
-Report issues and enhancements in the [Jenkins issue tracker](https://issues.jenkins.io/).
+```
+openjdk 17.0.13 2024-10-15
+```
+## Compile and Build Instructions
 
-## Contributing
+You can build this plugin using the following instructions depending on your environment.
 
-TODO review the default [CONTRIBUTING](https://github.com/jenkinsci/.github/blob/master/CONTRIBUTING.md) file and make sure it is appropriate for your plugin, if not then add your own one adapted from the base file
+### **1. Standard Build with Maven**
 
-Refer to our [contribution guidelines](https://github.com/jenkinsci/.github/blob/master/CONTRIBUTING.md)
+Run the following commands in the project directory:
+```bash
+mvn clean install
+```
 
-## LICENSE
+### **2. Skipping tests**
 
-Licensed under MIT, see [LICENSE](LICENSE.md)
+```
+mvn clean install -DskipTests
+```
 
+### **2. Detialed build logs**
+
+```
+mvn clean install -X
+```
+
+### **3. Run Jenkins locally**
+
+```
+mvn hpi:run
+```
