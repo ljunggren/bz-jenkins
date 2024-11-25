@@ -1,0 +1,2 @@
+_extends: .github
+tag-template: boozang-jenkins-$NEXT_MINOR_VERSION

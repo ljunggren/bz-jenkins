@@ -1,0 +1,68 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:t="/lib/hudson" xmlns:d="jelly:define">
+
+<f:section title="Boozang Configuration">
+    <!-- Base URL -->
+    <f:entry title="Base URL" field="baseUrl">
+        <f:textbox default="https://staging-bh.boozang.com"/>
+    </f:entry>
+
+    <!-- Token (Credential) -->
+    <f:entry title="Authentication Token" field="tokenId" description="Select the credentials containing the Boozang token.">
+        <f:credentialsSelect
+            credentialId="${instance.tokenId}"
+            class="com.cloudbees.plugins.credentials.common.StandardUsernamePasswordCredentials"
+            includeUser="false"
+            default="tokenId"/>
+    </f:entry>
+
+    <!-- Project ID -->
+    <f:entry title="Project ID" field="project">
+        <f:textbox/>
+    </f:entry>
+
+    <!-- Branch Name -->
+    <f:entry title="Branch Name" field="branch">
+        <f:textbox default="main"/>
+    </f:entry>
+
+    <!-- Test Identifier -->
+    <f:entry title="Test Identifier" field="test">
+        <f:textbox default="default_test"/>
+    </f:entry>
+
+    <!-- Number of Workers -->
+    <f:entry title="Number of Workers" field="workers">
+        <f:number default="2"/>
+    </f:entry>
+
+    <!-- Group Number -->
+    <f:entry title="Group Number" field="group">
+        <f:number default="1"/>
+    </f:entry>
+
+    <!-- Filter -->
+    <f:entry title="Filter" field="filter">
+        <f:textbox/>
+    </f:entry>
+
+    <!-- Environment -->
+    <f:entry title="Environment" field="env">
+        <f:number default="0"/>
+    </f:entry>
+
+    <!-- Self Reference Flag -->
+    <f:entry title="Self Reference Flag" field="self">
+        <f:checkbox/>
+    </f:entry>
+
+    <!-- Scope -->
+    <f:entry title="Scope" field="scope">
+        <f:textbox/>
+    </f:entry>
+
+    <!-- Additional Parameters -->
+    <f:entry title="Additional Parameters" field="parameter">
+        <f:textbox/>
+    </f:entry>
+</f:section>
